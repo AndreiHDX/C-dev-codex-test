@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Telegram Chat</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="chat-app">
+      <section class="join-panel" id="joinPanel">
+        <h1>Mini Telegram Chat</h1>
+        <p>Введите имя и комнату, чтобы начать общаться.</p>
+
+        <label>
+          Имя
+          <input id="username" type="text" placeholder="Например: Alex" maxlength="20" />
+        </label>
+
+        <label>
+          Комната
+          <input id="room" type="text" placeholder="general" maxlength="20" />
+        </label>
+
+        <button id="joinBtn">Подключиться</button>
+      </section>
+
+      <section class="chat-panel hidden" id="chatPanel">
+        <header>
+          <h2 id="roomTitle"></h2>
+          <span id="status">онлайн</span>
+        </header>
+
+        <div id="messages" class="messages"></div>
+
+        <form id="messageForm" autocomplete="off">
+          <input id="messageInput" type="text" placeholder="Введите сообщение..." maxlength="400" />
+          <button type="submit">Отправить</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
